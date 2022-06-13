@@ -24,4 +24,3 @@ npm install ethers
 npm start
 ```
 
-## Live application URL
