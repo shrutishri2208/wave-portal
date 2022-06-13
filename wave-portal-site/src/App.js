@@ -9,8 +9,9 @@ function App() {
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
   const [loader, setLoader] = useState(false);
+  const [error, setError] = useState(false);
 
-  const contractAddress = "0x5A2590687f2b06346557efbe4366496A93312100";
+  const contractAddress = "0x46B7912EC550aC5E4Ac1dF8684F3143aC729E46D";
   const contractABI = abi.abi;
 
   const checkIfWalletIsConnected = async () => {
@@ -59,6 +60,7 @@ function App() {
 
   const wave = async () => {
     setLoader(false);
+    setError(false);
     try {
       const { ethereum } = window;
 
@@ -91,6 +93,10 @@ function App() {
         console.log("No ethereum object found");
       }
     } catch (error) {
+      setLoader(false);
+      setError(true);
+
+      console.log("Wait for 10 minutes!");
       console.log(error);
     }
   };
@@ -216,6 +222,7 @@ function App() {
           })}
         </div>
         {loader && <h2>RECORDING YOUR WAVE...</h2>}
+        {error && <h2>WAIT FOR 10 MINUTES BEFORE REQUESTING AGAIN!</h2>}
         {/* <h2>RECORDING YOUR WAVE...</h2> */}
       </div>
     </div>
