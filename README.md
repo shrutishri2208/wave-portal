@@ -1,15 +1,26 @@
-# Basic Sample Hardhat Project
+# 👋 Hey there! 
+**Connect your ethereum wallet and get some test ethers!**
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+## Cloning and running the application locally
+### Clone the project 
 ```
+git clone https://github.com/shrutishri2208/wave-portal.git
+```
+
+### Navigate to the directory
+```
+cd wave-portal
+cd wave-site
+```
+
+### Install all the dependencies
+```
+npm install
+npm install ethers
+```
+
+### Run the application
+```
+npm start
+```
+
