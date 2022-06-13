@@ -85,7 +85,7 @@ function App() {
         await waveTxn.wait();
         console.log("Mined...", waveTxn.hash);
         setLoader(false);
-        // getAllWaves();
+        getAllWaves();
 
         count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total waves: ", count.toNumber());
