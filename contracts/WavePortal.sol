@@ -38,22 +38,8 @@ contract WavePortal {
 
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
-        // seed = (block.difficulty + block.timestamp + seed) % 100;
-        // console.log("Random seed generated: ", seed);
-
-        // if (seed < 50) {
-        //     console.log("%s HAS WON!", msg.sender);
-        //     uint256 prizeAmount = 0.0001 ether;
-        //     require(
-        //         prizeAmount <= address(this).balance,
-        //         "Trying to withdraw more money than contract has"
-        //     );
-        //     (bool success, ) = (msg.sender).call{value: prizeAmount}("");
-        //     require(success, "Failed to withdraw money from contract");
-        // }
-        // emit newWave(msg.sender, block.timestamp, _message);
         console.log("%s HAS WON!", msg.sender);
-        uint256 prizeAmount = 0.02 ether;
+        uint256 prizeAmount = 0.002 ether;
         require(
             prizeAmount <= address(this).balance,
             "Trying to withdraw more money than contract has"

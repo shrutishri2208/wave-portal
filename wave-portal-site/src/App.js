@@ -180,8 +180,8 @@ function App() {
         <div className="header">👋 Hey there!</div>
         <div className="bio">
           I am Shruti Shrivastava and I am a self-taught game developer,
-          dabbling with Unity and blockchain. <br></br>Connect your Ethereum
-          wallet and wave at me to get some test ethers 😉
+          dabbling with Unity, react.js and blockchain. <br></br>Connect your
+          Ethereum wallet and wave at me to get some test ethers 😉
         </div>
         <div className="buttons">
           {!currentAccount && (
